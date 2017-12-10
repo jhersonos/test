@@ -7,8 +7,15 @@ module.exports = {
 	},
 	session:function(req,res,next){
 		User.findOne({email:req.body.email,password:req.body.password},function(err,user){
-	 	req.session.user_id = user._id 	
-		 	res.redirect("/app")
+	 	req.session.user_id = user._id
+	 		if (user.type == "admin") {
+	 			res.redirect("/app/admin")
+	 		}else if(user.type=="cajero"){
+	 			res.redirect("/app/cajero")
+	 		}else{
+	 			res.redirect("/app/cajero")
+	 		}
+		 	
 		})
 	}
 }
