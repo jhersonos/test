@@ -3,6 +3,6 @@ module.exports = {
 		res.render("app/admin/index")
 	},
 	orden:function(req,res,next){
-		res.render("app/admin/orden")
+		res.render("orden")
 	}
 }

@@ -1,3 +1,5 @@
+var User = require("../models/user").User;
+
 module.exports = {
 	index:function(req,res,next){
 		res.render("index",{message:req.flash("loginMessage")})
@@ -13,7 +15,7 @@ module.exports = {
 	 		}else if(user.type=="cajero"){
 	 			res.redirect("/app/cajero")
 	 		}else{
-	 			res.redirect("/app/cajero")
+	 			res.redirect("/app/chef")
 	 		}
 		 	
 		})

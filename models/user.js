@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // **************  Conexión a la base de datos
-// mongoose.connect('mongodb://localhost/app');
+mongoose.connect('mongodb://localhost/app');
 
 // **************  Schemas
 // Productos
@@ -14,6 +14,6 @@ var userSchema = {
 // **************  Definimos los getters del schema
 var User = new Schema(userSchema);
  
-var User = mongoose.model("User",user_schema)
+var User = mongoose.model("User",userSchema)
 
 module.exports.User = User
