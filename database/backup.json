@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5a2dbc4144a34bdccf5ba73b"},"email":"admin@tektontest.com","password":"123","type":"admin"}
+{"_id":{"$oid":"5a2dd50044a34bdccf5ba73d"},"email":"chef@tektontest.com","password":"123","type":"chef"}
+{"_id":{"$oid":"5a2dda1444a34bdccf5ba73e"},"email":"cajero@tektontest.com","password":"123","type":"cajero"}

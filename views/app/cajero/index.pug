@@ -1,3 +1,41 @@
 extends ../../layout.pug
 block content
-	h1 index del cajero
+	.row
+		.col-md-6.remove-float.mx-auto.big-top-space
+			h1 Registrar pedido
+			form(action="/create",method="POST")
+				div.form-group
+					label(for="user") Cliente
+					input.form-control(type="text",name="user",placeholder="nombre cliente",id="user")
+				div.form-group
+					label(for="payment") Método de pago
+					select.form-control#payment(name="payment")
+						option -- seleccione metodo de pago --
+						option(value="tarjeta") tarjeta
+						option(value="tarjeta") efectivo
+				.form-row
+					.col
+						label(for="detail") productos
+						select.form-control#detail(name="detail")
+							option -- seleccione productos --
+							option(value="id-hamburguesa") hambuguesa
+							option(value="id-papas") papas
+							option(value="id-hotdog") hotdog
+					.col
+						label(for="list") lista
+						.box
+							ul.list-group
+								li.list-group-item hotdog #[a(href="#",class="text-right") s/. 12,5]
+								li.list-group-item hamburguesa #[a(href="#",class="text-right") s/. 12,5]
+								li.list-group-item papas #[a(href="#",class="text-right") s/. 12,5]
+				div.form-group
+					label(for="observations") observaciones
+					textarea.form-control#observations(name="observations")
+				div.form-group
+					label(for="state") estado
+					input.form-control(type="text",name="state",placeholder="estado",id="state",disabled,value="comanda")
+				div.form-group
+					label(for="price") Total
+					input.form-control(type="text",name="price",placeholder="Total",id="price",disabled,value="37.5")
+				div.form-group.top-space
+					input.btn.btn-info(type="submit",value="Enviar")

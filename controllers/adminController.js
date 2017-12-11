@@ -2,7 +2,10 @@ module.exports = {
 	index:function(req,res,next){
 		res.render("app/admin/index")
 	},
-	orden:function(req,res,next){
-		res.render("orden")
+	caja:function(req,res,next){
+		res.render("app/admin/caja")
+	},
+	reporte:function(req,res,next){
+		res.render("app/admin/reporte")
 	}
 }

@@ -1,5 +1,4 @@
 extends layout
-
 block content
 	.container
 		.row
@@ -14,6 +13,8 @@ block content
 					.form-group
 							label(for="password") password
 							input.form-control#password(type="text",name="password",placeholder="nombre de usuario")
+							//- if message
+							//- 	small #{message}
 					.row
 						.col-xs-12.col-sd-12.col-md-12.col-lg-12
 							input.btn.btn-button(type="submit",value="ingresar")

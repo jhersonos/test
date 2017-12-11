@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -14,4 +14,30 @@ a {
 }
 .remove-float{
 	float:none;
+}
+.black{
+	background-color: #222;
+}
+nav{
+	padding: 1rem;
+	text-align: right;
+}
+nav ul{
+	margin: 0;
+}
+nav li{
+	display: inline-block;
+}
+nav li a{
+	color:white;
+}
+.right-space{
+	margin-right: 1em;
+}
+.box{
+	max-height: 150px;
+	overflow-y: scroll;
+}
+small{
+	color:red;
 }

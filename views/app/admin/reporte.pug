@@ -1,0 +1,54 @@
+extends ../../layout.pug
+block content
+	nav.large-padding.black.white-text
+		ul
+			li.right-space 
+				a(href="/admin") inicio
+			li.right-space 
+				a(href="caja") caja
+			li.right-space 
+				a(href="reporte") reporte
+	br
+	.container
+		.row
+			.col-md-4.remove-float
+				.form-group
+					label(for="search") Buscar por
+					select.form-control#search(name="search")
+						option -- seleccione tipo --
+						option(value="dia") dia
+						option(value="mes") mes
+						option(value="año") año
+		table.table.table-bordered
+			thead
+				tr
+					th(scope="col") #
+					th(scope="col") Cliente
+					th(scope="col") Producto
+					th(scope="col") Precio
+					th(scope="col") Observacion
+			tbody
+				tr
+					th(scope="row") 1
+					td Mark
+					td 3 hamgurguesas
+					td S/. 25
+					td extra mayonesa
+				tr
+					th(scope="row") 2
+					td Mark
+					td 3 hamgurguesas
+					td S/. 25
+					td extra mayonesa
+				tr
+					th(scope="row") 3
+					td Jacob
+					td 3 hamgurguesas
+					td S/. 25
+					td extra mayonesa
+				tr
+					th(scope="row") 4
+					td Pepe
+					td 3 hamgurguesas
+					td S/. 25
+					td extra mayonesa

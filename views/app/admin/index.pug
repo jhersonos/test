@@ -1,3 +1,65 @@
 extends ../../layout.pug
-block content
-	h1 este es el index del admin
+block content	
+	nav.large-padding.black.white-text
+		ul
+			li.right-space 
+				a(href="admin") inicio
+			li.right-space 
+				a(href="admin/caja") caja
+			li.right-space 
+				a(href="admin/reporte") reporte
+	.container
+		.row
+			.col-12.text-center
+				h3 Pedidos
+		.row
+			.col-sm-4
+				.card.border-success.mb-3(style="max-width: 20rem;")
+					.card-header Nuevo pedido
+					.card-body.text-success
+						h4.card-title Usuario cliente
+						p.card-text
+							| 3 hamburguesas						
+			.col-sm-4
+				.card.border-success.mb-3(style="max-width: 20rem;")
+					.card-header Nuevo pedido
+					.card-body.text-success
+						h4.card-title Usuario cliente
+						p.card-text
+							| 3 hamburguesas						
+			.col-sm-4
+				.card.border-success.mb-3(style="max-width: 20rem;")
+					.card-header Nuevo pedido
+					.card-body.text-success
+						h4.card-title Usuario cliente
+						p.card-text
+							| 3 hamburguesas						
+		.row
+			.col-12.text-center
+				h3 En proceso
+		.row
+			.col-sm-4
+				.card.border-primary.mb-3(style="max-width: 20rem;")
+					.card-header Pedido en proceso
+					.card-body.text-primary
+						h4.card-title Usuario cliente
+						p.card-text
+							| 3 hamburguesas					
+			.col-sm-4
+				.card.border-primary.mb-3(style="max-width: 20rem;")
+					.card-header Pedido en proceso
+					.card-body.text-primary
+						h4.card-title Usuario cliente
+						p.card-text
+							| 3 hamburguesas					
+		.row
+			.col-12.text-center
+				h3 Terminado
+		.row
+			.col-sm-4
+				.card.border-info.mb-3(style="max-width: 20rem;")
+					.card-header Pedido terminado
+					.card-body.text-info
+						h4.card-title Usuario cliente
+						p.card-text
+							| 3 hamburguesas						

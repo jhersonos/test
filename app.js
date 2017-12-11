@@ -6,6 +6,7 @@ const logger = require('morgan');
 const passport = require("passport")
 const flash = require("connect-flash")
 const cookieParser = require('cookie-parser');
+var cookieSession = require("cookie-session")
 const bodyParser = require('body-parser');
 const session = require("express-session")
 
@@ -31,10 +32,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({
-	secret: "asdlkjaslapp",
-	resave: false,
-	saveUninitialized:false
+app.use(cookieSession({
+  name:"session",
+  keys:["llave-1","llave-2"]
 }))
 app.use(passport.initialize())
 app.use(passport.session())
